@@ -787,3 +787,12 @@ body.dark .profile-tabs .active {
     object-fit: cover;
 
 }
+
+.sidebar li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+}
