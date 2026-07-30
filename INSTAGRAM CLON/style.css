@@ -1,0 +1,789 @@
+/* ===========================
+   Google Reset
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    color: #111;
+    display: flex;
+}
+
+/* ===========================
+   Sidebar
+=========================== */
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid #dbdbdb;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px 20px;
+}
+
+.logo {
+    font-size: 32px;
+    font-family: cursive;
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 18px;
+}
+
+.sidebar li:hover {
+    background: #f2f2f2;
+}
+
+.sidebar li.active {
+    font-weight: 600;
+}
+
+.sidebar i {
+    font-size: 23px;
+}
+
+/* ===========================
+   Main Layout
+=========================== */
+
+.main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+}
+
+/* ===========================
+   Feed
+=========================== */
+
+.feed {
+    width: 520px;
+}
+
+/* ===========================
+   Stories
+=========================== */
+
+.stories {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    margin-bottom: 30px;
+    scrollbar-width: none;
+}
+
+.stories::-webkit-scrollbar {
+    display: none;
+}
+
+.story {
+    text-align: center;
+    cursor: pointer;
+}
+
+.story img {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    padding: 3px;
+    background:
+        linear-gradient(45deg,
+            #f9ce34,
+            #ee2a7b,
+            #6228d7);
+}
+
+.story p {
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+/* ===========================
+   Post Card
+=========================== */
+
+.post {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.profile h3 {
+    font-size: 15px;
+}
+
+.profile p {
+    color: #777;
+    font-size: 13px;
+}
+
+.verify {
+    color: #0095f6;
+    font-size: 13px;
+}
+
+.post-img {
+    width: 100%;
+    display: block;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.actions i {
+    font-size: 24px;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.actions i:hover {
+    transform: scale(1.15);
+}
+
+.post h4 {
+    padding: 0 15px;
+    margin-bottom: 8px;
+}
+
+.post p {
+    padding: 0 15px;
+    margin-bottom: 14px;
+}
+
+.post input {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #eee;
+    padding: 16px;
+    outline: none;
+    font-size: 15px;
+}
+
+/* ===========================
+   Right Panel
+=========================== */
+
+.right {
+    width: 320px;
+}
+
+.my-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.my-profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.my-profile p {
+    color: #888;
+}
+
+.suggest {
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.suggestion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.suggestion img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.suggestion span {
+    flex: 1;
+    margin-left: 12px;
+    font-weight: 500;
+}
+
+.suggestion button {
+    background: #0095f6;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.suggestion button:hover {
+    background: #0077cc;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 1024px) {
+
+    .right {
+        display: none;
+    }
+
+    .feed {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .main {
+        margin-left: 90px;
+        width: calc(100% - 90px);
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 90px;
+    }
+
+    .sidebar span {
+        display: none;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px) {
+
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin: 0;
+        width: 100%;
+        display: block;
+        padding: 10px;
+    }
+
+    .feed {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .stories {
+        gap: 12px;
+    }
+
+    .story img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .post {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width:480px) {
+
+    .post-header h3 {
+        font-size: 14px;
+    }
+
+    .post p {
+        font-size: 14px;
+    }
+
+    .actions i {
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================
+   Dark Mode
+========================= */
+
+body.dark {
+    background: #000;
+    color: white;
+}
+
+
+body.dark .sidebar,
+body.dark .post {
+    background: #121212;
+    border-color: #333;
+}
+
+
+body.dark .sidebar li:hover {
+    background: #222;
+}
+
+
+body.dark input {
+    background: #121212;
+    color: white;
+    border-color: #333;
+}
+
+
+body.dark .profile p,
+body.dark .my-profile p {
+    color: #aaa;
+}
+
+
+/* Like Red */
+
+.like.active {
+    color: red;
+}
+
+/* =========================
+ Mobile Bottom Navbar
+========================= */
+
+.bottom-nav {
+
+    display: none;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px) {
+
+    .bottom-nav {
+
+        position: fixed;
+
+        bottom: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 60px;
+
+        background: white;
+
+        border-top: 1px solid #ddd;
+
+        display: flex;
+
+        justify-content: space-around;
+
+        align-items: center;
+
+        z-index: 1000;
+
+    }
+
+
+    .bottom-nav i {
+
+        font-size: 22px;
+
+        cursor: pointer;
+
+    }
+
+
+    body.dark .bottom-nav {
+
+        background: #121212;
+
+        border-color: #333;
+
+    }
+
+
+}
+
+/* =========================
+ Profile Page
+========================= */
+
+
+.profile-page {
+
+    width: 700px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+}
+
+
+
+.profile-top {
+
+    display: flex;
+
+    gap: 50px;
+
+    align-items: center;
+
+}
+
+
+
+.profile-photo {
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+}
+
+
+
+.profile-info {
+
+    flex: 1;
+
+}
+
+
+
+.profile-name {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.profile-name button {
+
+    border: none;
+
+    padding: 8px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+
+.stats {
+
+    display: flex;
+
+    gap: 35px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.stats div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+.bio p {
+
+    margin-top: 5px;
+
+}
+
+
+
+/* Tabs */
+
+
+.profile-tabs {
+
+    margin-top: 40px;
+
+    border-top: 1px solid #ddd;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 60px;
+
+    padding: 15px;
+
+}
+
+
+
+.profile-tabs div {
+
+    cursor: pointer;
+
+    color: #777;
+
+}
+
+
+
+.profile-tabs .active {
+
+    color: black;
+
+    font-weight: bold;
+
+}
+
+
+
+/* Grid */
+
+
+.profile-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 5px;
+
+}
+
+
+
+.profile-grid img {
+
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    object-fit: cover;
+
+}
+
+
+
+/* Dark Mode */
+
+
+body.dark .profile-page {
+
+    background: #121212;
+
+}
+
+
+body.dark .profile-tabs {
+
+    border-color: #333;
+
+}
+
+
+body.dark .profile-tabs .active {
+
+    color: white;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px) {
+
+    .profile-page {
+
+        width: 100%;
+
+        padding: 15px;
+
+    }
+
+
+
+    .profile-top {
+
+        gap: 20px;
+
+    }
+
+
+
+    .profile-photo {
+
+        width: 90px;
+
+        height: 90px;
+
+    }
+
+
+
+    .profile-name {
+
+        flex-wrap: wrap;
+
+    }
+
+
+
+    .stats {
+
+        gap: 15px;
+
+        font-size: 13px;
+
+    }
+
+
+    .profile-tabs {
+
+        gap: 30px;
+
+    }
+
+}
+
+.profile-page {
+
+    width: 700px;
+    margin: 40px auto;
+
+}
+
+
+.profile-header {
+
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+
+
+.profile-header img {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+
+.profile-header button {
+
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+
+.profile-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
+}
+
+
+.profile-grid img {
+
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+
+}
